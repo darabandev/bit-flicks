@@ -7,10 +7,12 @@ const Navigation = ({ isLoaded }) => {
   const sessionUser = useSelector(state => state.session.user);
 
   return (
-    <ul>
-      <NavLink to="/">Home</NavLink>
+    <ul className="navbar">
       {sessionUser ? (
-        <ProfileButton user={sessionUser} />
+        <>
+          <NavLink to="/">Home</NavLink>
+          <ProfileButton user={sessionUser} />
+        </>
       ) : (
         <>
           <NavLink to="/login">Log In</NavLink>
