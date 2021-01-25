@@ -6,7 +6,8 @@ export async function fetch(url, options = {}) {
 
   if (options.method.toUpperCase() !== "GET") {
     options.headers["Content-Type"] = options.headers["Content-Type"] || "application/json";
-    options.headers["XSRF-Token"] = Cookies.get("XSRF-Token");
+    options.headers["XSRF-Token"] = Cookies.get("XSRF-TOKEN");
+    console.log("OPTIONS.HEADERS", options.headers);
   }
 
   const res = await window.fetch(url, options);
