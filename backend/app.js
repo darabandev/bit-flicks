@@ -30,7 +30,6 @@ app.use(
   })
 );
 app.use((req, res, next) => {
-  console.log("hit middleware");
   next();
 });
 app.use(routes);
