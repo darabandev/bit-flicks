@@ -15,8 +15,11 @@ const Navigation = ({ isLoaded }) => {
         </>
       ) : (
         <>
-          <NavLink to="/login">Log In</NavLink>
-          <NavLink to="/signup">Sign Up</NavLink>
+          <p class="nav-text">Bit Flicks</p>
+          <div className="login-signup-nav-btns">
+            <NavLink to="/login">Log In</NavLink>
+            <NavLink to="/signup">Sign Up</NavLink>
+          </div>
         </>
       )}
     </ul>
