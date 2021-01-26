@@ -11,20 +11,20 @@ const setResults = results => {
 
 export const trySearch = term => async dispatch => {
   const response = await fetch(`/search/${term}`);
-
-  dispatch(setResults(response));
-  return response;
+  //   console.log(response);
+  const results = response.data.Search;
+  //   console.log(results);
+  dispatch(setResults(results));
+  //   return response;
 };
 
-const initialState = { search: null };
+const initialState = [];
 
 const searchReducer = (state = initialState, action) => {
-  let newState;
+  let newState = Object.assign({}, state);
   switch (action.type) {
     case SET_RESULTS:
-      newState = Object.assign({}, state);
-      newState.searchResults = action.payload;
-      return newState;
+      return action.payload;
     default:
       return state;
   }
