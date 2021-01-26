@@ -20,7 +20,7 @@ const SearchContainer = () => {
     <>
       <h1>Search Results</h1>
       {results.map((result, idx) => (
-        <SearchResultItem key={result.Title} info={result} />
+        <SearchResultItem key={`${result.Title}${idx}`} info={result} />
       ))}
     </>
   );
