@@ -15,7 +15,7 @@ const Navigation = ({ isLoaded }) => {
         </>
       ) : (
         <>
-          <p class="nav-text">Bit Flicks</p>
+          <p className="nav-text">Bit Flicks</p>
           <div className="login-signup-nav-btns">
             <NavLink to="/login">Log In</NavLink>
             <NavLink to="/signup">Sign Up</NavLink>

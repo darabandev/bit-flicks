@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Route, Switch } from "react-router-dom";
 import LoginContainer from "./components/LoginContainer";
+import HomePageContainer from "./components/HomePageContainer";
 import Navigation from "./components/Navigation";
 import * as sessionActions from "./store/session";
 
@@ -18,7 +19,10 @@ function App() {
         <Navigation isLoaded={isLoaded} />
         {isLoaded && (
           <Switch>
-            <Route path="(/|/login|/signup)">
+            <Route exact path="/">
+              <HomePageContainer />
+            </Route>
+            <Route path="(/login|/signup)">
               <LoginContainer />
             </Route>
             {/* <Route path="/login">
