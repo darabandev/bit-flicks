@@ -21,7 +21,6 @@ export const trySearch = term => async dispatch => {
 const initialState = [];
 
 const searchReducer = (state = initialState, action) => {
-  let newState = Object.assign({}, state);
   switch (action.type) {
     case SET_RESULTS:
       return action.payload;

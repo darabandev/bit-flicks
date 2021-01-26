@@ -1,0 +1,8 @@
+.search-result {
+  background-color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 50px;
+}
+
+.search-pic {
+  max-width: 300px;
+}

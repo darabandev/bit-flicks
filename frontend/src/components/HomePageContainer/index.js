@@ -1,7 +1,6 @@
 import { useParams, Redirect, useHistory } from "react-router-dom";
 import { useState } from "react";
 import { useSelector } from "react-redux";
-import { fetch } from "../../store/csrf";
 
 const HomePageContainer = () => {
   const sessionUser = useSelector(state => state.session.user);
@@ -13,10 +12,6 @@ const HomePageContainer = () => {
   if (!params[0] && !sessionUser) return <Redirect to="/login" />;
 
   const search = async () => {
-    // const res = await dispatch(trySearch("matrix"));
-    // console.log(res.data.Search);
-    // const response = await fetch(`/search/${searchTerm}`);
-    // console.log(response.data.Search);
     history.push(`/search/${searchTerm}`);
   };
 

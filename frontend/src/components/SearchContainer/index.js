@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { trySearch } from "../../store/search";
+import SearchResultItem from "../SearchResultItem";
 
 const SearchContainer = () => {
   const dispatch = useDispatch();
@@ -11,7 +12,7 @@ const SearchContainer = () => {
   useEffect(() => {
     const parsedSearch = searchTerm.replace(" ", "+");
     dispatch(trySearch(parsedSearch));
-  }, []);
+  }, [dispatch, searchTerm]);
 
   console.log(results);
 
@@ -19,11 +20,7 @@ const SearchContainer = () => {
     <>
       <h1>Search Results</h1>
       {results.map((result, idx) => (
-        <>
-          <p key={idx}>{result.Title}</p>
-          <p key={idx}>{result.Year}</p>
-          <img key={idx} src={result.Poster || } />
-        </>
+        <SearchResultItem key={result.Title} info={result} />
       ))}
     </>
   );
