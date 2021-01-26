@@ -10,12 +10,17 @@ module.exports = {
       },
       userId: {
         type: Sequelize.INTEGER,
+        references: { model: "Users" },
+        allowNull: false,
       },
       movieId: {
         type: Sequelize.INTEGER,
+        references: { model: "Movies" },
+        allowNull: false,
       },
       review: {
         type: Sequelize.STRING(300),
+        allowNull: false,
       },
       createdAt: {
         allowNull: false,
