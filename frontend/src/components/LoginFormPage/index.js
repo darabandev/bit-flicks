@@ -22,22 +22,34 @@ const LoginFormPage = () => {
   };
 
   return (
-    <form onSubmit={onSubmit}>
+    <>
       <ul>
         {errors.map((err, i) => (
           <li key={i}>{err}</li>
         ))}
       </ul>
-      <input required name="name" value={credential} type="text" onChange={e => setCredential(e.target.value)}></input>
-      <input
-        required
-        name="password"
-        value={password}
-        type="password"
-        onChange={e => setPassword(e.target.value)}
-      ></input>
-      <button type="submit">Submit</button>
-    </form>
+      <form onSubmit={onSubmit} className="auth-form">
+        <input
+          required
+          name="name"
+          value={credential}
+          type="text"
+          placeholder="Username or Email"
+          onChange={e => setCredential(e.target.value)}
+        ></input>
+        <input
+          required
+          name="password"
+          value={password}
+          type="password"
+          placeholder="Password"
+          onChange={e => setPassword(e.target.value)}
+        ></input>
+        <button type="submit" className="auth-btn">
+          Submit
+        </button>
+      </form>
+    </>
   );
 };
 

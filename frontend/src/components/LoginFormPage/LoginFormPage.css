@@ -1,3 +1,82 @@
-/* form {
-  color: blue;
-} */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 500px;
+  margin: 0 auto;
+  padding: 20px 0;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.auth-form input {
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid white;
+  color: white;
+  text-align: center;
+  max-width: 400px;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.auth-form input::placeholder {
+  color: rgb(245, 127, 17);
+}
+
+.auth-form input:active,
+.auth-form input:focus {
+  outline: none;
+  border-bottom: 4px solid white;
+  background-color: transparent;
+}
+
+.auth-form input:-webkit-autofill,
+.auth-form input:-webkit-autofill:hover,
+.auth-form input:-webkit-autofill:focus,
+.auth-form input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: white !important;
+}
+
+.auth-btn {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 15px;
+  transition: color, background-color 0.2s;
+  -webkit-transition: color, background-color 0.2s;
+  -moz-transition: color, background-color 0.2s;
+  -ms-transition: color, background-color 0.2s;
+  -o-transition: color, background-color 0.2s;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.auth-btn:hover {
+  background-color: white;
+  color: rgb(175, 27, 175);
+}
+
+.auth-btn:active {
+  outline: none;
+  position: relative;
+  top: 3px;
+}
+
+.auth-btn:focus {
+  outline: none;
+}
