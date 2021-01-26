@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Route, Switch } from "react-router-dom";
 import LoginContainer from "./components/LoginContainer";
+import SearchContainer from "./components/SearchContainer";
 import HomePageContainer from "./components/HomePageContainer";
 import Navigation from "./components/Navigation";
 import * as sessionActions from "./store/session";
@@ -25,12 +26,9 @@ function App() {
             <Route path="(/login|/signup)">
               <LoginContainer />
             </Route>
-            {/* <Route path="/login">
-              <LoginFormPage />
+            <Route path="/search/:searchTerm">
+              <SearchContainer />
             </Route>
-            <Route path="/signup">
-              <SignupFormPage />
-            </Route> */}
           </Switch>
         )}
       </>
