@@ -4,6 +4,7 @@ import { Route, Switch } from "react-router-dom";
 import LoginContainer from "./components/LoginContainer";
 import SearchContainer from "./components/SearchContainer";
 import HomePageContainer from "./components/HomePageContainer";
+import MoviePageContainer from "./components/MoviePageContainer";
 import Navigation from "./components/Navigation";
 import * as sessionActions from "./store/session";
 
@@ -28,6 +29,9 @@ function App() {
             </Route>
             <Route path="/search/:searchTerm">
               <SearchContainer />
+            </Route>
+            <Route path="/movies/:imdbId">
+              <MoviePageContainer />
             </Route>
           </Switch>
         )}

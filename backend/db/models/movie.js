@@ -3,7 +3,17 @@ module.exports = (sequelize, DataTypes) => {
   const Movie = sequelize.define(
     "Movie",
     {
-      imdbId: DataTypes.STRING(25),
+      imdbId: DataTypes.STRING,
+      title: DataTypes.STRING,
+      year: DataTypes.STRING,
+      poster: DataTypes.STRING,
+      runtime: DataTypes.STRING,
+      genre: DataTypes.STRING,
+      director: DataTypes.STRING,
+      actors: DataTypes.STRING,
+      plot: DataTypes.STRING,
+      country: DataTypes.STRING,
+      imdbRating: DataTypes.STRING,
     },
     {}
   );

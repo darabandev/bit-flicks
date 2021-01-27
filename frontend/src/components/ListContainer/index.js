@@ -6,7 +6,7 @@ const ListContainer = ({ lists }) => {
       <h1>Your Lists</h1>
       <ul>
         {lists.map(list => (
-          <ListItem list={list} />
+          <ListItem key={list.id} list={list} />
         ))}
       </ul>
     </>

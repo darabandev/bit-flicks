@@ -10,7 +10,8 @@ router.get(
   asyncHandler(async (req, res) => {
     const { imdbId } = req.params;
 
-    const { data } = await axios.get(`http://www.omdbapi.com/?i=${imdbId}&apikey=402b57d7`);
+    const { data } = await axios.get(`http://www.omdbapi.com/?i=${imdbId}&apikey=${apiKey}`);
+
     res.send(data);
   })
 );
