@@ -2,8 +2,7 @@ const express = require("express");
 const asyncHandler = require("express-async-handler");
 const axios = require("axios");
 const { Movie } = require("../../db/models");
-const apiKey = require("../../apiKey");
-const { check } = require("express-validator");
+const apiKey = require("../../apiKey.js");
 const router = express.Router();
 
 //this database did not start off seeded with every movie
