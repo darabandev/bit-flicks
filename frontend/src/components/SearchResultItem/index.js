@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./SearchResultItem.css";
 import pic from "./not-found.jpg";
 
@@ -6,7 +7,9 @@ const SearchResultItem = ({ info }) => {
 
   return (
     <div className="search-result">
-      <img className="search-pic" src={picSrc(info.Poster)} alt="Movie Poster" />
+      <Link to={`/movies/${info.imdbID}`}>
+        <img className="search-pic" src={picSrc(info.Poster)} alt="Movie Poster" />
+      </Link>
       <p>{info.Title}</p>
       <p>{info.Year}</p>
     </div>

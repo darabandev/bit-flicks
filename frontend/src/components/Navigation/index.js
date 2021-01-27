@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import ProfileButton from "./profileButton";
 import "./Navigation.css";
+import SearchBar from "../Searchbar";
 
 const Navigation = ({ isLoaded }) => {
   const sessionUser = useSelector(state => state.session.user);
@@ -11,6 +12,7 @@ const Navigation = ({ isLoaded }) => {
       {sessionUser ? (
         <>
           <NavLink to="/">Home</NavLink>
+          <SearchBar />
           <ProfileButton user={sessionUser} />
         </>
       ) : (
