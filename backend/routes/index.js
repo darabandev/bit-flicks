@@ -2,8 +2,10 @@ const express = require("express");
 const router = express.Router();
 const apiRouter = require("./api");
 const searchRouter = require("./search");
+const listRouter = require("./lists");
 router.use("/api", apiRouter);
 router.use("/search", searchRouter);
+router.use("/lists", listRouter);
 // Static routes
 // Serve React build files in production
 if (process.env.NODE_ENV === "production") {

@@ -11,11 +11,9 @@ const setResults = results => {
 
 export const trySearch = term => async dispatch => {
   const response = await fetch(`/search/${term}`);
-  //   console.log(response);
   const results = response.data.Search;
-  //   console.log(results);
+
   dispatch(setResults(results));
-  //   return response;
 };
 
 const initialState = [];
