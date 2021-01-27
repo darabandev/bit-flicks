@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
   );
   Movie.associate = function (models) {
     Movie.hasMany(models.Thought, { foreignKey: "movieId" });
-    Movie.belongsToMany(models.MovieList, { foreignKey: "movieId", through: "MovieList", otherKey: "listId" });
+    Movie.belongsToMany(models.List, { foreignKey: "movieId", through: "MovieList", otherKey: "listId" });
   };
   return Movie;
 };

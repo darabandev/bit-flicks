@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
   );
   List.associate = function (models) {
     List.belongsTo(models.User, { foreignKey: "userId" });
-    List.belongsToMany(models.MovieList, { foreignKey: "listId", through: "MovieList", otherKey: "movieId" });
+    List.belongsToMany(models.Movie, { foreignKey: "listId", through: "MovieList", otherKey: "movieId" });
   };
   return List;
 };
