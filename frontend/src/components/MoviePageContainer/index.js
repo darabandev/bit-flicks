@@ -15,7 +15,13 @@ const MoviePageContainer = () => {
   return (
     <>
       <h1>Movie Page</h1>
-      <h2>{movie.Title}</h2>
+      <h2>{movie.title}</h2>
+      <h2>{movie.year}</h2>
+      <h2>{movie.poster}</h2>
+      <h2>{movie.runtime}</h2>
+      <h2>{movie.genre}</h2>
+      <h2>{movie.director}</h2>
+      <h2>{movie.actors}</h2>
     </>
   );
 };
