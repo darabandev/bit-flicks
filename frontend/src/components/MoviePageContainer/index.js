@@ -1,7 +1,7 @@
 import { getMovie } from "../../store/movies";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react/cjs/react.development";
+import { useEffect } from "react";
 
 const MoviePageContainer = () => {
   const dispatch = useDispatch();
