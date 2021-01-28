@@ -1,0 +1,16 @@
+.modal-container {
+  position: relative;
+}
+
+.close-new-list {
+  background-color: white;
+  border: 1px solid blue;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 3px 4px;
+}
+
+.modal-container h3 {
+  margin-bottom: 10px;
+}

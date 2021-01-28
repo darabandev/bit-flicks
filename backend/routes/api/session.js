@@ -12,6 +12,7 @@ const validateLogin = [
   handleValidationErrors,
 ];
 
+//login existing user
 router.post(
   "/",
   validateLogin,
@@ -36,11 +37,13 @@ router.post(
   })
 );
 
+//logout
 router.delete("/", (_req, res) => {
   res.clearCookie("token");
   return res.json({ message: "success" });
 });
 
+//continue existing session
 router.get("/", restoreUser, (req, res) => {
   const { user } = req;
   if (user) {

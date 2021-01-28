@@ -20,6 +20,7 @@ const validateSignup = [
   handleValidationErrors,
 ];
 
+//create new account
 router.post(
   "/",
   validateSignup,

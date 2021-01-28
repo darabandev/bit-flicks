@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { trySearch } from "../../store/search";
 import SearchResultItem from "../SearchResultItem";
+import "./SearchContainer.css";
 
 const SearchContainer = () => {
   const dispatch = useDispatch();
@@ -18,7 +19,7 @@ const SearchContainer = () => {
 
   return (
     <>
-      <h1>Search Results</h1>
+      <h1 className="search-header">Search Results</h1>
       {results.map((result, idx) => (
         <SearchResultItem key={`${result.Title}${idx}`} info={result} />
       ))}

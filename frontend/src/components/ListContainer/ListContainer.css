@@ -1,0 +1,16 @@
+.list-container {
+  background-color: #f1f2f6;
+  margin-top: 8%;
+  padding: 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.list-header {
+  color: #ff4757;
+  margin-bottom: 10px;
+  text-align: center;
+}

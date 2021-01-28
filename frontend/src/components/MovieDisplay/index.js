@@ -1,4 +1,4 @@
-import BtnAddToList from "../BtnAddToList";
+import AddToListForm from "../AddToListForm";
 
 const MovieDisplay = ({ movie }) => {
   return (
@@ -13,7 +13,7 @@ const MovieDisplay = ({ movie }) => {
         <h2>{movie.director}</h2>
         <h2>{movie.actors}</h2>
       </div>
-      <BtnAddToList />
+      <AddToListForm />
     </>
   );
 };

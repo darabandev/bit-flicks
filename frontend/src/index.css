@@ -7,7 +7,6 @@
 
 body {
   background-image: url("cool-background.png");
-  background-size: 100% 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,4 +16,5 @@ body {
   width: 95%;
   max-width: 1000px;
   min-height: 100vh;
+  color: #2f3542;
 }

@@ -3,6 +3,7 @@ import { fetch } from "./csrf";
 const GET_LISTS = "lists/GET_LISTS";
 const NEW_LIST = "lists/NEW_LIST";
 const DELETE_LIST = "lists/DELETE_LIST";
+const ADD_TO_LIST = "lists/ADD_TO_LIST";
 
 const setLists = lists => {
   return {
@@ -21,6 +22,13 @@ const newList = lists => {
 const deleteList = lists => {
   return {
     type: DELETE_LIST,
+    payload: lists,
+  };
+};
+
+const addToList = lists => {
+  return {
+    type: ADD_TO_LIST,
     payload: lists,
   };
 };
@@ -50,6 +58,15 @@ export const deleteOneList = (userId, listId) => async dispatch => {
   dispatch(deleteList(response.data));
 };
 
+export const addMovieToList = (userId, listId, imdbId) => async dispatch => {
+  const url = `/lists/${userId}/${listId}/${imdbId}`;
+  const response = await fetch(url, {
+    method: "POST",
+  });
+
+  dispatch(addToList(response.data));
+};
+
 const initialState = [];
 
 const listReducer = (state = initialState, action) => {
@@ -59,6 +76,8 @@ const listReducer = (state = initialState, action) => {
     case NEW_LIST:
       return action.payload;
     case DELETE_LIST:
+      return action.payload;
+    case ADD_TO_LIST:
       return action.payload;
     default:
       return state;

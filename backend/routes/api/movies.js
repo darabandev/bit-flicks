@@ -5,7 +5,8 @@ const { Movie } = require("../../db/models");
 const apiKey = require("../../apiKey.js");
 const router = express.Router();
 
-//this database did not start off seeded with every movie
+//database does not start off seeded with any movies --
+
 //this function determines if the app should pull movie info
 //from the local database (if it already exists), or the 3rd
 //party API.  If it pulls from the 3rd party API, it will then
@@ -15,6 +16,7 @@ const checkLocalDbForMovie = async id => {
   return movie !== null ? movie : false;
 };
 
+//show info for one specific movie
 router.get(
   "/:id",
   asyncHandler(async (req, res) => {
