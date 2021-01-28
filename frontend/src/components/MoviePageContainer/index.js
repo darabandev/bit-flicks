@@ -15,7 +15,6 @@ const MoviePageContainer = () => {
 
   return (
     <>
-      <h1>Movie Page</h1>
       <MovieDisplay movie={movie} />
     </>
   );

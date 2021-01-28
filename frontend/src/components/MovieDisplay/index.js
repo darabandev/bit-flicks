@@ -1,9 +1,10 @@
 import AddToListForm from "../AddToListForm";
+import "./MovieDisplay.css";
 
 const MovieDisplay = ({ movie }) => {
   return (
     <>
-      <div>
+      <div className="movie-display">
         <h2>{movie.title}</h2>
         <h2>Local DB ID: {movie.id}</h2>
         <img src={movie.poster} alt="poster" />
