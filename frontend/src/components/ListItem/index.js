@@ -14,7 +14,7 @@ const ListItem = ({ list }) => {
   return (
     <div className="list-item">
       <h3 key={list.id}>{list.name}</h3>
-      <ul>{movies && movies.map(movie => <li key={movie.id}>{movie.title}</li>)}</ul>
+      <ul>{movies && movies.map(movie => <img className="list-img" key={movie.id} src={movie.poster} />)}</ul>
       <button onClick={handleDelete}>Delete</button>
     </div>
   );
