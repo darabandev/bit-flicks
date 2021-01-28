@@ -2,6 +2,7 @@ import { fetch } from "./csrf";
 
 const GET_LISTS = "lists/GET_LISTS";
 const NEW_LIST = "lists/NEW_LIST";
+const DELETE_LIST = "lists/DELETE_LIST";
 
 const setLists = lists => {
   return {
@@ -13,6 +14,13 @@ const setLists = lists => {
 const newList = lists => {
   return {
     type: NEW_LIST,
+    payload: lists,
+  };
+};
+
+const deleteList = lists => {
+  return {
+    type: DELETE_LIST,
     payload: lists,
   };
 };
@@ -32,6 +40,16 @@ export const createNewList = (userId, name) => async dispatch => {
   dispatch(newList(response.data));
 };
 
+export const deleteOneList = (userId, listId) => async dispatch => {
+  const url = `/lists/${userId}/${listId}`;
+
+  const response = await fetch(url, {
+    method: "DELETE",
+  });
+
+  dispatch(deleteList(response.data));
+};
+
 const initialState = [];
 
 const listReducer = (state = initialState, action) => {
@@ -39,6 +57,8 @@ const listReducer = (state = initialState, action) => {
     case GET_LISTS:
       return action.payload;
     case NEW_LIST:
+      return action.payload;
+    case DELETE_LIST:
       return action.payload;
     default:
       return state;
