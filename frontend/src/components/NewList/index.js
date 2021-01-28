@@ -19,6 +19,7 @@ const customStyles = {
 const NewList = () => {
   const dispatch = useDispatch();
   const sessionUser = useSelector(state => state.session.user);
+
   const [showModal, setShowModal] = useState(false);
   const [listName, setListName] = useState("");
 

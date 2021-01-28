@@ -8,11 +8,16 @@ const AddToListForm = () => {
   const { imdbId } = useParams();
   const sessionUser = useSelector(state => state.session.user);
   const lists = useSelector(state => state.list);
-  const [listId, setListId] = useState(1);
+  const [listId, setListId] = useState(0);
+  const [buttonDisabled, setButtonDisabled] = useState(true);
 
   useEffect(() => {
     if (sessionUser) dispatch(getLists(sessionUser.id));
   }, [dispatch, sessionUser]);
+
+  useEffect(() => {
+    listId == 0 ? setButtonDisabled(true) : setButtonDisabled(false);
+  }, [listId]);
 
   const handleAdd = async (e, listId) => {
     e.preventDefault();
@@ -22,13 +27,16 @@ const AddToListForm = () => {
   return (
     <form>
       <select onChange={e => setListId(e.target.value)}>
+        <option value="0">Select a List</option>
         {lists.map(list => (
           <option key={list.id} value={list.id}>
             {list.name}
           </option>
         ))}
       </select>
-      <button onClick={e => handleAdd(e, listId)}>Add to List</button>
+      <button onClick={e => handleAdd(e, listId)} disabled={buttonDisabled}>
+        Add to List
+      </button>
     </form>
   );
 };
