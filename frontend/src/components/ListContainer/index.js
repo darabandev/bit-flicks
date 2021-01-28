@@ -1,3 +1,4 @@
+import NewList from "../NewList";
 import ListItem from "../ListItem";
 
 const ListContainer = ({ lists }) => {
@@ -9,6 +10,7 @@ const ListContainer = ({ lists }) => {
           <ListItem key={list.id} list={list} />
         ))}
       </ul>
+      <NewList />
     </>
   );
 };
