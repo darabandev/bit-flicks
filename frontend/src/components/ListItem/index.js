@@ -1,5 +1,6 @@
 import { deleteOneList } from "../../store/lists";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import "./ListItem.css";
 
 const ListItem = ({ list }) => {
@@ -14,7 +15,14 @@ const ListItem = ({ list }) => {
   return (
     <div className="list-item">
       <h3 key={list.id}>{list.name}</h3>
-      <ul>{movies && movies.map(movie => <img className="list-img" key={movie.id} src={movie.poster} />)}</ul>
+      <ul>
+        {movies &&
+          movies.map(movie => (
+            <Link to={`/movies/${movie.imdbId}`}>
+              <img className="list-img" key={movie.id} src={movie.poster} />
+            </Link>
+          ))}
+      </ul>
       <button onClick={handleDelete}>Delete</button>
     </div>
   );
