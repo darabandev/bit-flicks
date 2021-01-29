@@ -4,11 +4,19 @@ const GET_LISTS = "lists/GET_LISTS";
 const NEW_LIST = "lists/NEW_LIST";
 const DELETE_LIST = "lists/DELETE_LIST";
 const ADD_TO_LIST = "lists/ADD_TO_LIST";
+const GET_ONE_LIST = "lists/GET_ONE_LIST";
 
 const setLists = lists => {
   return {
     type: GET_LISTS,
     payload: lists,
+  };
+};
+
+const getOneList = list => {
+  return {
+    type: GET_ONE_LIST,
+    payload: list,
   };
 };
 
@@ -37,6 +45,12 @@ export const getLists = id => async dispatch => {
   const response = await fetch(`/lists/${id}`);
 
   dispatch(setLists(response.data));
+};
+
+export const getOneListFromDb = listId => async dispatch => {
+  const response = await fetch(`/lists/single/${listId}`);
+
+  dispatch(getOneList([response.data]));
 };
 
 export const createNewList = (userId, name) => async dispatch => {
@@ -78,6 +92,8 @@ const listReducer = (state = initialState, action) => {
     case DELETE_LIST:
       return action.payload;
     case ADD_TO_LIST:
+      return action.payload;
+    case GET_ONE_LIST:
       return action.payload;
     default:
       return state;

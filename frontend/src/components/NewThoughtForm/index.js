@@ -13,6 +13,7 @@ const NewThoughtForm = () => {
     e.preventDefault();
 
     dispatch(createNewThought(imdbId, sessionUser.id, review));
+    setReview("");
   };
 
   return (

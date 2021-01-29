@@ -4,6 +4,7 @@
 
 .list-img {
   max-width: 135px;
+  max-height: 197px;
   margin-right: 15px;
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -11,4 +12,5 @@
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border: 1px solid #2f3542;
+  margin-bottom: 10px;
 }

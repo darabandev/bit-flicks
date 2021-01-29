@@ -5,6 +5,7 @@ import LoginContainer from "./components/LoginContainer";
 import SearchContainer from "./components/SearchContainer";
 import HomePageContainer from "./components/HomePageContainer";
 import MoviePageContainer from "./components/MoviePageContainer";
+import ListPageContainer from "./components/ListPageContainer";
 import Navigation from "./components/Navigation";
 import * as sessionActions from "./store/session";
 
@@ -32,6 +33,9 @@ function App() {
             </Route>
             <Route path="/movies/:imdbId">
               <MoviePageContainer />
+            </Route>
+            <Route path="/lists/:listId">
+              <ListPageContainer />
             </Route>
           </Switch>
         )}

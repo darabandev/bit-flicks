@@ -1,3 +1,4 @@
+const { response } = require("express");
 const express = require("express");
 const router = express.Router();
 const asyncHandler = require("express-async-handler");
@@ -10,6 +11,16 @@ router.get(
     const { userId } = req.params;
     const lists = await List.findAll({ where: { userId }, include: { model: Movie } });
     res.json(lists);
+  })
+);
+
+//shows one specific list
+router.get(
+  "/single/:listId",
+  asyncHandler(async (req, res) => {
+    const { listId } = req.params;
+    const list = await List.findByPk(listId, { include: { model: Movie } });
+    res.json(list);
   })
 );
 

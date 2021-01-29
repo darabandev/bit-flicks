@@ -11,6 +11,7 @@
 
 .search-pic {
   max-width: 300px;
+  border: 1px solid #2f3542;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;

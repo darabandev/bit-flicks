@@ -12,16 +12,19 @@ const ListItem = ({ list }) => {
     dispatch(deleteOneList(sessionUser.id, list.id));
   };
 
+  const croppedList = movies.slice(0, 6);
+
   return (
     <div className="list-item">
       <h3 key={list.id}>{list.name}</h3>
       <ul>
         {movies &&
-          movies.map(movie => (
+          croppedList.map(movie => (
             <Link to={`/movies/${movie.imdbId}`}>
               <img className="list-img" key={movie.id} src={movie.poster} alt="poster" />
             </Link>
           ))}
+        {movies.length > 6 && <span>...</span>}
       </ul>
       <button onClick={handleDelete}>Delete</button>
     </div>
