@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import MovieDisplay from "../MovieDisplay";
+import ThoughtDisplay from "../ThoughtDisplay";
 
 const MoviePageContainer = () => {
   const dispatch = useDispatch();
@@ -16,6 +17,7 @@ const MoviePageContainer = () => {
   return (
     <>
       <MovieDisplay movie={movie} />
+      <ThoughtDisplay />
     </>
   );
 };

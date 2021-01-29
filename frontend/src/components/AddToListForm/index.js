@@ -16,7 +16,7 @@ const AddToListForm = () => {
   }, [dispatch, sessionUser]);
 
   useEffect(() => {
-    listId == 0 ? setButtonDisabled(true) : setButtonDisabled(false);
+    listId === 0 || listId === "0" ? setButtonDisabled(true) : setButtonDisabled(false);
   }, [listId]);
 
   const handleAdd = async (e, listId) => {

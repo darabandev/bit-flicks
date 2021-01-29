@@ -8,3 +8,13 @@
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
+
+.movie-display-img {
+  max-width: 350px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border: 1px solid #2f3542;
+}

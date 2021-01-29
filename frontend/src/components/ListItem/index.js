@@ -19,7 +19,7 @@ const ListItem = ({ list }) => {
         {movies &&
           movies.map(movie => (
             <Link to={`/movies/${movie.imdbId}`}>
-              <img className="list-img" key={movie.id} src={movie.poster} />
+              <img className="list-img" key={movie.id} src={movie.poster} alt="poster" />
             </Link>
           ))}
       </ul>
