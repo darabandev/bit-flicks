@@ -20,9 +20,11 @@ const SearchContainer = () => {
   return (
     <>
       <h1 className="search-header">Search Results</h1>
-      {results.map((result, idx) => (
-        <SearchResultItem key={`${result.Title}${idx}`} info={result} />
-      ))}
+      <div className="results-container">
+        {results.map((result, idx) => (
+          <SearchResultItem key={`${result.Title}${idx}`} info={result} />
+        ))}
+      </div>
     </>
   );
 };

@@ -7,10 +7,13 @@
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+  text-align: center;
+  width: 30%;
 }
 
 .search-pic {
-  max-width: 300px;
+  max-width: 250px;
+  width: 95%;
   border: 1px solid #2f3542;
   border-radius: 5px;
   -webkit-border-radius: 5px;
