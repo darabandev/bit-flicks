@@ -1,5 +1,6 @@
 import NewList from "../NewList";
 import ListItem from "../ListItem";
+import { Link } from "react-router-dom";
 import "./ListContainer.css";
 
 const ListContainer = ({ lists }) => {
@@ -8,7 +9,9 @@ const ListContainer = ({ lists }) => {
       <h1 className="list-header">Lists</h1>
       <ul>
         {lists.map(list => (
-          <ListItem key={list.id} list={list} />
+          <Link to={`/lists/${list.id}`}>
+            <ListItem key={list.id} list={list} />
+          </Link>
         ))}
       </ul>
       <NewList />
