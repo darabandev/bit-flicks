@@ -8,8 +8,10 @@ router.get(
   "/:imdbId",
   asyncHandler(async (req, res) => {
     const { imdbId } = req.params;
+    const movie = await Movie.findOne({ where: { imdbId } });
+    const movieId = movie.id;
 
-    const thoughts = await Thought.findAll({ where: { imdbId } });
+    const thoughts = await Thought.findAll({ where: { movieId } });
     res.json(thoughts);
   })
 );

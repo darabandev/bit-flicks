@@ -17,8 +17,8 @@ const newThought = thoughts => {
   };
 };
 
-export const getAllThoughts = movieId => async dispatch => {
-  const response = await fetch(`/thoughts/${movieId}`);
+export const getAllThoughts = imdbId => async dispatch => {
+  const response = await fetch(`/thoughts/${imdbId}`);
 
   dispatch(getThoughts(response.data));
 };
