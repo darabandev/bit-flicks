@@ -1,0 +1,15 @@
+.thought-modal {
+  min-width: 240px;
+}
+
+.new-thought-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.new-thought-form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+}

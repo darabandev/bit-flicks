@@ -1,10 +1,10 @@
-import NewThoughtForm from "../NewThoughtForm";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { getAllThoughts } from "../../store/thoughts";
 import { useParams } from "react-router-dom";
 import "./ThoughtDisplay.css";
 import ThoughtComment from "../ThoughtComment";
+import NewThought from "../NewThought";
 
 const ThoughtDisplay = () => {
   const dispatch = useDispatch();
@@ -21,7 +21,7 @@ const ThoughtDisplay = () => {
   return (
     <div className="thought-container">
       <h1>Thoughts</h1>
-      <NewThoughtForm />
+      <NewThought />
       {thoughts.map(thought => (
         <ThoughtComment thought={thought} user={sessionUser} />
       ))}
