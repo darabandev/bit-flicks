@@ -23,8 +23,8 @@ export const getAllThoughts = movieId => async dispatch => {
   dispatch(getThoughts(response.data));
 };
 
-export const createNewThought = (movieId, userId, review) => async dispatch => {
-  const response = await fetch(`/thoughts/new/${movieId}`, {
+export const createNewThought = (imdbId, userId, review) => async dispatch => {
+  const response = await fetch(`/thoughts/new/${imdbId}`, {
     method: "POST",
     body: JSON.stringify({ userId, review }),
   });

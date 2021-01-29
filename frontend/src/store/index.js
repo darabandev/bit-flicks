@@ -4,12 +4,14 @@ import sessionReducer from "./session";
 import searchReducer from "./search";
 import listReducer from "./lists";
 import movieReducer from "./movies";
+import thoughtReducer from "./thoughts";
 
 const rootReducer = combineReducers({
   session: sessionReducer,
   search: searchReducer,
   list: listReducer,
   movie: movieReducer,
+  thought: thoughtReducer,
 });
 
 let enhancer;
