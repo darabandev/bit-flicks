@@ -1,0 +1,16 @@
+.thought {
+  border-bottom: 1px solid #2f3542;
+  padding: 10px 0;
+}
+
+.thought:last-of-type {
+  border-bottom: none;
+}
+
+.review {
+  margin-bottom: 5px;
+}
+
+.timestamp {
+  font-size: 11px;
+}

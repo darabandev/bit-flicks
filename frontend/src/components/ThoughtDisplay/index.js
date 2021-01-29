@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { getAllThoughts } from "../../store/thoughts";
 import { useParams } from "react-router-dom";
 import "./ThoughtDisplay.css";
+import ThoughtComment from "../ThoughtComment";
 
 const ThoughtDisplay = () => {
   const dispatch = useDispatch();
@@ -15,14 +16,14 @@ const ThoughtDisplay = () => {
 
   useEffect(() => {
     if (sessionUser) dispatch(getAllThoughts(imdbId));
-  }, [thoughts, dispatch, imdbId, sessionUser]);
+  }, [dispatch, imdbId, sessionUser]);
 
   return (
     <div className="thought-container">
       <h1>Thoughts</h1>
       <NewThoughtForm />
       {thoughts.map(thought => (
-        <p>{thought.review}</p>
+        <ThoughtComment thought={thought} user={sessionUser} />
       ))}
     </div>
   );
