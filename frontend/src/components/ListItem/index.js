@@ -28,7 +28,7 @@ const ListItem = ({ list }) => {
           ))}
         {movies.length > 6 && (
           <Link to={`/lists/${list.id}`}>
-            <span>...</span>
+            <span className="ellipsis">...</span>
           </Link>
         )}
       </ul>

@@ -14,6 +14,8 @@ const ListPageContainer = () => {
     if (sessionUser) dispatch(getOneListFromDb(listId));
   }, [dispatch, sessionUser]);
 
+  if (!list) return null;
+
   return (
     <>
       <h1>{list.name}</h1>

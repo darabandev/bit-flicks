@@ -14,3 +14,13 @@
   border: 1px solid #2f3542;
   margin-bottom: 10px;
 }
+
+.ellipsis {
+  background-color: #e1e1e4;
+  padding: 1px 4px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
