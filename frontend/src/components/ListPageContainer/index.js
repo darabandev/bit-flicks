@@ -2,6 +2,8 @@ import { useParams } from "react-router-dom";
 import { getOneListFromDb } from "../../store/lists";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
+import "../ListItem/ListItem.css";
+import "./ListPage.css";
 
 const ListPageContainer = () => {
   const dispatch = useDispatch();
@@ -17,12 +19,17 @@ const ListPageContainer = () => {
   if (!list) return null;
 
   return (
-    <>
+    <div className="list-page">
       <h1>{list.name}</h1>
-      {list.Movies.map(movie => (
-        <img src={movie.poster} alt="poster" />
-      ))}
-    </>
+      <div className="img-holder">
+        {list.Movies.map(movie => (
+          <div className="img-slot">
+            <img className="list-page-img" key={list.Movies.id} src={movie.poster} alt="poster" />
+            <p>{movie.title}</p>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 };
 

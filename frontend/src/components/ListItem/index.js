@@ -19,6 +19,7 @@ const ListItem = ({ list }) => {
       <Link to={`/lists/${list.id}`}>
         <h3 key={list.id}>{list.name}</h3>
       </Link>
+      <button>Rename</button>
       <ul>
         {movies &&
           croppedList.map(movie => (
