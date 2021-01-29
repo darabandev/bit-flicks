@@ -8,7 +8,7 @@ const ListPageContainer = () => {
   const { listId } = useParams();
 
   const sessionUser = useSelector(state => state.session.user);
-  const lists = useSelector(state => state.list);
+  const list = useSelector(state => state.list)[0];
 
   useEffect(() => {
     if (sessionUser) dispatch(getOneListFromDb(listId));
@@ -16,8 +16,9 @@ const ListPageContainer = () => {
 
   return (
     <>
-      {lists.map(list => (
-        <h1>{list.name}</h1>
+      <h1>{list.name}</h1>
+      {list.Movies.map(movie => (
+        <img src={movie.poster} alt="poster" />
       ))}
     </>
   );

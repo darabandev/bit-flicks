@@ -16,7 +16,9 @@ const ListItem = ({ list }) => {
 
   return (
     <div className="list-item">
-      <h3 key={list.id}>{list.name}</h3>
+      <Link to={`/lists/${list.id}`}>
+        <h3 key={list.id}>{list.name}</h3>
+      </Link>
       <ul>
         {movies &&
           croppedList.map(movie => (
@@ -24,7 +26,11 @@ const ListItem = ({ list }) => {
               <img className="list-img" key={movie.id} src={movie.poster} alt="poster" />
             </Link>
           ))}
-        {movies.length > 6 && <span>...</span>}
+        {movies.length > 6 && (
+          <Link to={`/lists/${list.id}`}>
+            <span>...</span>
+          </Link>
+        )}
       </ul>
       <button onClick={handleDelete}>Delete</button>
     </div>
