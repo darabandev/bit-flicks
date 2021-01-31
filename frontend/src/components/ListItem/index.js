@@ -17,11 +17,14 @@ const ListItem = ({ list }) => {
   return (
     <div className="list-item">
       <Link className="list-link" to={`/lists/${list.id}`}>
-        <h3 key={list.id}>
+        <h3 className="list-item-header" key={list.id}>
           {list.name}
-          <i className="edit-btn far fa-edit"></i>
         </h3>
       </Link>
+      <i className="list-edit-btn far fa-edit"></i>
+      <div onClick={handleDelete} className="list-delete-btn">
+        <i class="far fa-trash-alt"></i>
+      </div>
       <ul>
         {movies &&
           croppedList.map(movie => (
@@ -35,7 +38,6 @@ const ListItem = ({ list }) => {
           </Link>
         )}
       </ul>
-      <button onClick={handleDelete}>Delete</button>
     </div>
   );
 };

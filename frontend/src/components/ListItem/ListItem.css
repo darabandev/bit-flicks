@@ -9,9 +9,22 @@
   color: #af1baf;
 }
 
-.edit-btn {
-  margin-left: 10px;
-  margin-bottom: 10px;
+.list-item-header {
+  display: inline;
+}
+
+.list-edit-btn {
+  margin: 0 10px 10px 10px;
+  cursor: pointer;
+}
+
+.list-delete-btn {
+  color: red;
+  display: inline-block;
+}
+
+.list-delete-btn:hover {
+  cursor: pointer;
 }
 
 .list-img {
