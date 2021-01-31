@@ -41,13 +41,16 @@ router.post(
 router.put(
   "/edit/:listId",
   asyncHandler(async (req, res) => {
-    const listId = req.params;
-    const { name } = req.body;
+    const { listId } = req.params;
+    const { name, userId } = req.body;
 
     const list = await List.findByPk(listId);
     if (name) list.name = name;
 
     await list.save();
+
+    const lists = await List.findAll({ where: { userId }, include: { model: Movie } });
+    res.json(lists);
   })
 );
 

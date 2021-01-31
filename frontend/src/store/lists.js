@@ -62,6 +62,15 @@ export const createNewList = (userId, name) => async dispatch => {
   dispatch(newList(response.data));
 };
 
+export const renameList = (listId, userId, name) => async dispatch => {
+  const response = await fetch(`/lists/edit/${listId}`, {
+    method: "PUT",
+    body: JSON.stringify({ name, userId }),
+  });
+
+  dispatch(setLists(response.data));
+};
+
 export const deleteOneList = (userId, listId) => async dispatch => {
   const url = `/lists/${userId}/${listId}`;
 
