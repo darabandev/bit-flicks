@@ -12,8 +12,6 @@ const ThoughtDisplay = () => {
   const thoughts = useSelector(state => state.thought);
   const { imdbId } = useParams();
 
-  console.log(thoughts);
-
   useEffect(() => {
     if (sessionUser) dispatch(getAllThoughts(imdbId));
   }, [dispatch, imdbId, sessionUser]);

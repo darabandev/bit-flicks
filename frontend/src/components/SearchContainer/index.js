@@ -15,8 +15,6 @@ const SearchContainer = () => {
     dispatch(trySearch(parsedSearch));
   }, [dispatch, searchTerm]);
 
-  console.log(results);
-
   // if (!results) return <h1>Nothing Found</h1>;
 
   return (

@@ -7,7 +7,7 @@ const SearchBar = () => {
 
   const search = async e => {
     e.preventDefault();
-    // console.log(searchTerm);
+
     history.push(`/search/${searchTerm}`);
     setSearchTerm("");
   };

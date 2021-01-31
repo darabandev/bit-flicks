@@ -63,7 +63,7 @@ router.delete(
     await MovieList.destroy({ where: { listId } });
     await List.destroy({ where: { id: listId } });
 
-    const lists = await List.findAll({ where: { userId }, include: { model: Movie }, order: ["createdAt", "DESC"] });
+    const lists = await List.findAll({ where: { userId }, include: { model: Movie }, order: [["createdAt", "ASC"]] });
     res.json(lists);
   })
 );
