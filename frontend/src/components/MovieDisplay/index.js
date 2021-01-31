@@ -5,12 +5,21 @@ const MovieDisplay = ({ movie }) => {
   return (
     <div className="movie-display">
       <h1>{movie.title}</h1>
-      <img className="movie-display-img" src={movie.poster} alt="poster" />
-      <h2>{movie.year}</h2>
-      <h2>{movie.runtime}</h2>
-      <h2>{movie.genre}</h2>
-      <h2>{movie.director}</h2>
-      <h2>{movie.actors}</h2>
+      <div className="movie-display-container">
+        <img className="movie-display-img" src={movie.poster} alt="poster" />
+        <div className="movie-info">
+          <h3>Directed by {movie.director}</h3>
+          <h4>{movie.plot}</h4>
+          <p>Starring: {movie.actors}</p>
+          <p>{movie.year}</p>
+          <p>{movie.runtime}</p>
+          <p>{movie.genre}</p>
+          <p>{movie.country}</p>
+          <p>
+            IMDB Rating: <span>{movie.imdbRating}</span>
+          </p>
+        </div>
+      </div>
       <AddToListForm />
     </div>
   );
