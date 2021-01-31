@@ -9,6 +9,12 @@
   -o-border-radius: 10px;
 }
 
+.movie-display h1 {
+  text-align: center;
+  color: #ab1fab;
+  margin-bottom: 15px;
+}
+
 .movie-display-img {
   max-width: 350px;
   border-radius: 5px;

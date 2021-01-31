@@ -1,7 +1,7 @@
 .list-item {
   margin-bottom: 10px;
   border-bottom: 1px solid black;
-  padding-bottom: 5px;
+  padding-bottom: 15px;
 }
 
 .list-item:last-of-type {
@@ -41,7 +41,6 @@
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border: 1px solid #2f3542;
-  margin-bottom: 10px;
 }
 
 .ellipsis {

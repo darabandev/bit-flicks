@@ -8,3 +8,9 @@
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
+
+.thought-container h1 {
+  text-align: center;
+  color: #ab1fab;
+  margin-bottom: 15px;
+}
