@@ -30,8 +30,12 @@
   display: flex;
 }
 
+.login-signup-nav-btns a {
+  color: #af1baf;
+}
+
 .nav-text {
   font-size: 20px;
-  color: #2f3542;
+  color: #af1baf;
   font-family: "Playball", Verdana, Geneva, Tahoma, sans-serif;
 }

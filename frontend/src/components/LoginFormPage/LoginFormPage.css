@@ -17,7 +17,7 @@
   border: none;
   background-color: transparent;
   border-bottom: 2px solid rgb(175, 27, 175);
-  color: rgb(175, 27, 175);
+  color: #2f3542;
   text-align: center;
   max-width: 400px;
   transition: 0.2s;
@@ -30,13 +30,13 @@
 }
 
 .auth-form input::placeholder {
-  color: rgb(175, 27, 175);
+  color: #2f3542;
 }
 
 .auth-form input:active,
 .auth-form input:focus {
   outline: none;
-  border-bottom: 4px solid white;
+  border-bottom: 4px solid #2f3542;
   background-color: transparent;
 }
 
@@ -45,13 +45,13 @@
 .auth-form input:-webkit-autofill:focus,
 .auth-form input:-webkit-autofill:active {
   transition: background-color 5000s ease-in-out 0s;
-  -webkit-text-fill-color: rgb(175, 27, 175) !important;
+  -webkit-text-fill-color: #2f3542 !important;
 }
 
 .auth-btn {
   background-color: transparent;
-  border: 2px solid white;
-  color: white;
+  border: 2px solid #2f3542;
+  color: #2f3542;
   padding: 10px 20px;
   border-radius: 5px;
   font-size: 15px;
@@ -67,8 +67,8 @@
 }
 
 .auth-btn:hover {
-  background-color: white;
-  color: rgb(175, 27, 175);
+  background-color: #2f3542;
+  color: #f1f2f6;
 }
 
 .auth-btn:active {
