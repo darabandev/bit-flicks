@@ -14,3 +14,8 @@
 .timestamp {
   font-size: 11px;
 }
+
+.thought-user {
+  font-weight: bold;
+  color: #ab1fab;
+}

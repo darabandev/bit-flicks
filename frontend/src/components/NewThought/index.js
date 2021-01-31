@@ -38,7 +38,9 @@ const NewThought = () => {
 
   return (
     <>
-      <button onClick={() => setShowModal(true)}>What Did You Think?</button>
+      <button className="new-thought-btn" onClick={() => setShowModal(true)}>
+        What Did You Think?
+      </button>
       <Modal style={customStyles} isOpen={showModal}>
         <div className="modal-container thought-modal">
           <h3>Create New Thought</h3>

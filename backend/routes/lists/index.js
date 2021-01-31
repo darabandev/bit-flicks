@@ -9,7 +9,7 @@ router.get(
   "/:userId",
   asyncHandler(async (req, res) => {
     const { userId } = req.params;
-    const lists = await List.findAll({ where: { userId }, include: { model: Movie } });
+    const lists = await List.findAll({ where: { userId }, include: { model: Movie }, order: [["createdAt", "ASC"]] });
     res.json(lists);
   })
 );
@@ -32,7 +32,7 @@ router.post(
 
     await List.create({ name, userId });
 
-    const lists = await List.findAll({ where: { userId }, include: { model: Movie } });
+    const lists = await List.findAll({ where: { userId }, include: { model: Movie }, order: [["createdAt", "ASC"]] });
     res.json(lists);
   })
 );
@@ -49,7 +49,7 @@ router.put(
 
     await list.save();
 
-    const lists = await List.findAll({ where: { userId }, include: { model: Movie } });
+    const lists = await List.findAll({ where: { userId }, include: { model: Movie }, order: [["createdAt", "ASC"]] });
     res.json(lists);
   })
 );
@@ -63,7 +63,7 @@ router.delete(
     await MovieList.destroy({ where: { listId } });
     await List.destroy({ where: { id: listId } });
 
-    const lists = await List.findAll({ where: { userId }, include: { model: Movie } });
+    const lists = await List.findAll({ where: { userId }, include: { model: Movie }, order: ["createdAt", "DESC"] });
     res.json(lists);
   })
 );
@@ -78,7 +78,7 @@ router.post(
 
     await MovieList.create({ listId, movieId: movie.id });
 
-    const lists = await List.findAll({ where: { userId }, include: { model: Movie } });
+    const lists = await List.findAll({ where: { userId }, include: { model: Movie }, order: [["createdAt", "ASC"]] });
     res.json(lists);
   })
 );
