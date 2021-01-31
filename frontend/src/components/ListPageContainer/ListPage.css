@@ -11,9 +11,10 @@
   flex-direction: column;
 }
 
-.list-page h1 {
+.list-page-header {
   text-align: center;
   margin-bottom: 10px;
+  color: #af1baf;
 }
 
 .img-holder {

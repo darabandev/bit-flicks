@@ -20,7 +20,7 @@ const ListPageContainer = () => {
 
   return (
     <div className="list-page">
-      <h1>{list.name}</h1>
+      <h1 className="list-page-header">{list.name}</h1>
       <div className="img-holder">
         {list.Movies.map(movie => (
           <div className="img-slot">

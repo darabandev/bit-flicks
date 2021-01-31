@@ -6,6 +6,12 @@
 
 .list-link {
   text-decoration: none;
+  color: #af1baf;
+}
+
+.edit-btn {
+  margin-left: 10px;
+  margin-bottom: 10px;
 }
 
 .list-img {
