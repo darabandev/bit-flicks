@@ -16,7 +16,7 @@
 .auth-form input {
   border: none;
   background-color: transparent;
-  border-bottom: 2px solid rgb(175, 27, 175);
+  border-bottom: 2px solid #2f3542;
   color: #2f3542;
   text-align: center;
   max-width: 400px;
@@ -36,7 +36,8 @@
 .auth-form input:active,
 .auth-form input:focus {
   outline: none;
-  border-bottom: 4px solid #2f3542;
+  border-bottom: 4px solid #af1baf;
+  color: #af1baf;
   background-color: transparent;
 }
 
@@ -50,8 +51,8 @@
 
 .auth-btn {
   background-color: transparent;
-  border: 2px solid #2f3542;
-  color: #2f3542;
+  border: 2px solid #af1baf;
+  color: #af1baf;
   padding: 10px 20px;
   border-radius: 5px;
   font-size: 15px;
@@ -68,7 +69,7 @@
 
 .auth-btn:hover {
   background-color: #2f3542;
-  color: #f1f2f6;
+  border: 2px solid #2f3542;
 }
 
 .auth-btn:active {

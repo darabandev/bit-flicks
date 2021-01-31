@@ -22,7 +22,8 @@
   text-align: center;
 }
 
-.navbar a:hover {
+.navbar a:hover,
+.log-out-btn:hover {
   background-color: rgba(255, 255, 255, 0.616);
 }
 
@@ -30,7 +31,8 @@
   display: flex;
 }
 
-.login-signup-nav-btns a {
+.login-signup-nav-btns a,
+.log-out-btn {
   color: #af1baf;
 }
 
@@ -38,4 +40,20 @@
   font-size: 20px;
   color: #af1baf;
   font-family: "Playball", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.home-btn {
+  font-family: "Playball", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.log-out-btn {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+  padding: 0 5px;
+}
+
+.log-out-btn:hover {
+  cursor: pointer;
 }

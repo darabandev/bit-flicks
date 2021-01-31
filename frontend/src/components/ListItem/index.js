@@ -16,7 +16,7 @@ const ListItem = ({ list }) => {
 
   return (
     <div className="list-item">
-      <Link to={`/lists/${list.id}`}>
+      <Link className="list-link" to={`/lists/${list.id}`}>
         <h3 key={list.id}>{list.name}</h3>
       </Link>
       <button>Rename</button>
@@ -28,8 +28,8 @@ const ListItem = ({ list }) => {
             </Link>
           ))}
         {movies.length > 6 && (
-          <Link to={`/lists/${list.id}`}>
-            <span className="ellipsis">...</span>
+          <Link className="list-link" to={`/lists/${list.id}`}>
+            <span className="list-link ellipsis">...</span>
           </Link>
         )}
       </ul>

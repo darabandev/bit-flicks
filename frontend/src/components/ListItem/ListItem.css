@@ -4,6 +4,10 @@
   padding-bottom: 5px;
 }
 
+.list-link {
+  text-decoration: none;
+}
+
 .list-img {
   max-width: 135px;
   max-height: 197px;
