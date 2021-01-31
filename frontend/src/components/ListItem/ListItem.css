@@ -4,6 +4,10 @@
   padding-bottom: 5px;
 }
 
+.list-item:last-of-type {
+  border-bottom: none;
+}
+
 .list-link {
   text-decoration: none;
   color: #af1baf;

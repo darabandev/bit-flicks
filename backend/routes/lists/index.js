@@ -37,6 +37,20 @@ router.post(
   })
 );
 
+//edit existing list - basically used for renaming
+router.put(
+  "/edit/:listId",
+  asyncHandler(async (req, res) => {
+    const listId = req.params;
+    const { name } = req.body;
+
+    const list = await List.findByPk(listId);
+    if (name) list.name = name;
+
+    await list.save();
+  })
+);
+
 //delete list
 router.delete(
   "/:userId/:listId",

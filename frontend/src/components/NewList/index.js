@@ -34,7 +34,9 @@ const NewList = () => {
 
   return (
     <>
-      <button onClick={() => setShowModal(true)}>Create New List</button>
+      <button className="new-list-btn" onClick={() => setShowModal(true)}>
+        Create New List
+      </button>
       <Modal style={customStyles} isOpen={showModal}>
         <div className="modal-container">
           <h3>Create New List</h3>
