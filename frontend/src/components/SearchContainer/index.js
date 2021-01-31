@@ -17,6 +17,8 @@ const SearchContainer = () => {
 
   console.log(results);
 
+  // if (!results) return <h1>Nothing Found</h1>;
+
   return (
     <>
       <h1 className="search-header">Search Results</h1>

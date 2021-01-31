@@ -9,10 +9,14 @@ router.get(
   asyncHandler(async (req, res) => {
     const { imdbId } = req.params;
     const movie = await Movie.findOne({ where: { imdbId } });
-    const movieId = movie.id;
+    if (movie !== null) {
+      const movieId = movie.id;
 
-    const thoughts = await Thought.findAll({ where: { movieId } });
-    res.json(thoughts);
+      const thoughts = await Thought.findAll({ where: { movieId } });
+      res.json(thoughts);
+    } else {
+      res.json([]);
+    }
   })
 );
 

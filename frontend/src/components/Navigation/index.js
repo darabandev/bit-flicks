@@ -1,4 +1,4 @@
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { logout } from "../../store/session";
@@ -7,7 +7,13 @@ import "./Navigation.css";
 
 const Navigation = ({ isLoaded }) => {
   const dispatch = useDispatch();
+  const history = useHistory();
   const sessionUser = useSelector(state => state.session.user);
+
+  const handleLogout = () => {
+    dispatch(logout());
+    history.push("/");
+  };
 
   return (
     <ul className="navbar">
@@ -18,7 +24,7 @@ const Navigation = ({ isLoaded }) => {
           </Link>
           <SearchBar />
           <div className="log-out-btn">
-            <p onClick={() => dispatch(logout())}>Log Out</p>
+            <p onClick={handleLogout}>Log Out</p>
           </div>
         </>
       ) : (
