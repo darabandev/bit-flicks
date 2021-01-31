@@ -39,3 +39,7 @@
 .fa-trash-alt {
   color: red;
 }
+
+.fa-trash-alt:hover {
+  cursor: pointer;
+}

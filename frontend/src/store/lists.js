@@ -66,6 +66,15 @@ export const addMovieToList = (userId, listId, imdbId) => async dispatch => {
   dispatch(setLists(response.data));
 };
 
+export const deleteMovieFromList = (userId, listId, imdbId) => async dispatch => {
+  const url = `/lists/delete/${userId}/${listId}/${imdbId}`;
+  const response = await fetch(url, {
+    method: "DELETE",
+  });
+
+  dispatch(setLists(response.data));
+};
+
 const initialState = [];
 
 const listReducer = (state = initialState, action) => {
