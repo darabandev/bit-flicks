@@ -78,11 +78,24 @@ router.post(
 
     await MovieList.create({ listId, movieId: movie.id });
 
-    const lists = await List.findAll({ where: { userId } });
+    const lists = await List.findAll({ where: { userId }, include: { model: Movie } });
     res.json(lists);
   })
 );
 
-//todo: remove specific movie from specific list
+//remove specific movie from specific list
+router.delete(
+  "/delete/:userId/:listId/:imdbId",
+  asyncHandler(async (req, res) => {
+    const { userId, listId, imdbId } = req.params;
+
+    const movie = await Movie.findOne({ where: { imdbId } });
+
+    await MovieList.destroy({ where: { listId, movieId: movie.id } });
+
+    const lists = await List.findAll({ where: { userId }, include: { model: Movie } });
+    res.json(lists);
+  })
+);
 
 module.exports = router;

@@ -4,6 +4,7 @@ import { deleteOneList, renameList } from "../../store/lists";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import "./ListItem.css";
+import MovieList from "../MovieList";
 
 const customStyles = {
   content: {
@@ -37,6 +38,8 @@ const ListItem = ({ list }) => {
     dispatch(renameList(list.id, sessionUser.id, listName));
   };
 
+  if (!list || !movies) return null;
+
   const croppedList = movies.slice(0, 6);
 
   return (
@@ -51,7 +54,7 @@ const ListItem = ({ list }) => {
 
         <Modal style={customStyles} isOpen={showModal}>
           <div className="modal-container">
-            <h3>Rename List</h3>
+            <h3>Edit List</h3>
             <button className="close-new-list" onClick={() => setShowModal(false)}>
               x
             </button>
@@ -65,6 +68,7 @@ const ListItem = ({ list }) => {
               />
               <button type="submit">Create</button>
             </form>
+            <MovieList list={list} />
           </div>
         </Modal>
 
