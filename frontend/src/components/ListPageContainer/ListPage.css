@@ -9,6 +9,7 @@
   padding: 10px 20px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 100px;
 }
 
 .list-page-header {
