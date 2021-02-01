@@ -2,6 +2,7 @@ import { getLists, addMovieToList } from "../../store/lists";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import "./AddToListForm.css";
 
 const AddToListForm = ({ setShowModal }) => {
   const dispatch = useDispatch();
@@ -27,7 +28,7 @@ const AddToListForm = ({ setShowModal }) => {
 
   return (
     <form>
-      <select onChange={e => setListId(e.target.value)}>
+      <select className="add-to-list-input" onChange={e => setListId(e.target.value)}>
         <option value="0">Select a List</option>
         {lists.map(list => (
           <option key={list.id} value={list.id}>
@@ -35,7 +36,7 @@ const AddToListForm = ({ setShowModal }) => {
           </option>
         ))}
       </select>
-      <button onClick={e => handleAdd(e, listId)} disabled={buttonDisabled}>
+      <button className="add-to-list-submit" onClick={e => handleAdd(e, listId)} disabled={buttonDisabled}>
         Add to List
       </button>
     </form>

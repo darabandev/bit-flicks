@@ -1,0 +1,21 @@
+.add-to-list-submit {
+  background-color: #f1f2f6;
+  border: 0;
+  padding: 2px 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.add-to-list-input {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding: 1px 2px;
+  border: none;
+  border-right: 1px solid #af1baf;
+}
+
+.add-to-list-input:active,
+.add-to-list-input:focus,
+.add-to-list-submit:active {
+  outline: none;
+}

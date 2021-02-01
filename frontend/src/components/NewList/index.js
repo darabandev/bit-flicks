@@ -42,17 +42,20 @@ const NewList = () => {
         <div className="modal-container">
           <h3>Create New List</h3>
           <button className="close-new-list" onClick={() => setShowModal(false)}>
-            x
+            <i class="fas fa-times"></i>
           </button>
           <form onSubmit={handleCreateList}>
             <input
+              className="new-list-input"
               type="text"
               value={listName}
               onChange={e => setListName(e.target.value)}
               placeholder="List Name"
               required
             />
-            <button type="submit">Create</button>
+            <button className="new-list-submit" type="submit">
+              Create
+            </button>
           </form>
         </div>
       </Modal>

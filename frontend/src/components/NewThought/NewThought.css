@@ -11,7 +11,14 @@
 
 .new-thought-form textarea {
   width: 100%;
+  min-width: 300px;
+  min-height: 130px;
   margin-bottom: 10px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 
 .new-thought-btn {
@@ -46,4 +53,15 @@
 
 .new-thought-btn:focus {
   outline: none;
+}
+
+.new-thought-submit {
+  background-color: #f1f2f6;
+  border: 0;
+  padding: 3px 7px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }

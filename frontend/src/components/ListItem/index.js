@@ -57,17 +57,20 @@ const ListItem = ({ list }) => {
           <div className="modal-container">
             <h3>Edit List</h3>
             <button className="close-new-list" onClick={() => setShowModal(false)}>
-              x
+              <i className="fas fa-times"></i>
             </button>
             <form onSubmit={handleEditList}>
               <input
+                className="edit-list-input"
                 type="text"
                 value={listName}
                 onChange={e => setListName(e.target.value)}
                 placeholder="List Name"
                 required
               />
-              <button type="submit">Create</button>
+              <button className="edit-list-submit" type="submit">
+                Rename
+              </button>
             </form>
             <MovieList list={list} />
           </div>

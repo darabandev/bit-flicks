@@ -46,11 +46,13 @@ const NewThought = () => {
         <div className="modal-container thought-modal">
           <h3>Create New Thought</h3>
           <button className="close-new-list" onClick={() => setShowModal(false)}>
-            x
+            <i class="fas fa-times"></i>
           </button>
           <form className="new-thought-form" onSubmit={handleNewThought}>
             <textarea onKeyDown={e => checkKey(e)} value={review} onChange={e => setReview(e.target.value)}></textarea>
-            <button type="submit">Post</button>
+            <button className="new-thought-submit" type="submit">
+              Post
+            </button>
           </form>
         </div>
       </Modal>
