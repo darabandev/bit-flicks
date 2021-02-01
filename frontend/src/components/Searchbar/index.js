@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
+import "./Searchbar.css";
 
 const SearchBar = () => {
   const history = useHistory();
@@ -14,9 +15,15 @@ const SearchBar = () => {
 
   return (
     <form>
-      <input type="text" value={searchTerm} onChange={e => setSearchTerm(e.target.value)} />
-      <button type="submit" onClick={search}>
-        Search
+      <input
+        placeholder="Find a movie"
+        className="search-input"
+        type="text"
+        value={searchTerm}
+        onChange={e => setSearchTerm(e.target.value)}
+      />
+      <button className="search-submit" type="submit" onClick={search}>
+        <i class="fas fa-search"></i>
       </button>
     </form>
   );
