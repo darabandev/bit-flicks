@@ -30,6 +30,7 @@
 .movie-list-item {
   list-style-type: none;
   font-size: 12px;
+  color: #2f3542;
 }
 
 .movie-list-item:last-of-type {

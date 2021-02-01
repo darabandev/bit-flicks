@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-const AddToListForm = () => {
+const AddToListForm = ({ setShowModal }) => {
   const dispatch = useDispatch();
   const { imdbId } = useParams();
   const sessionUser = useSelector(state => state.session.user);
@@ -21,6 +21,7 @@ const AddToListForm = () => {
 
   const handleAdd = async (e, listId) => {
     e.preventDefault();
+    setShowModal(false);
     await dispatch(addMovieToList(sessionUser.id, listId, imdbId));
   };
 
