@@ -18,6 +18,8 @@
 .movie-display-container {
   display: flex;
   width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 .movie-display-img {
@@ -31,7 +33,7 @@
 }
 
 .movie-info {
-  margin-left: 100px;
+  margin-left: 70px;
   max-width: 400px;
   align-self: center;
 }

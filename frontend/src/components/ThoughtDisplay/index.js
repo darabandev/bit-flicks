@@ -19,6 +19,7 @@ const ThoughtDisplay = () => {
   return (
     <div className="thought-container">
       <h1>Thoughts</h1>
+      {thoughts.length === 0 && <h4>Be the first to give your thoughts on this movie!</h4>}
       <NewThought />
       {thoughts.map(thought => (
         <ThoughtComment thought={thought} user={sessionUser} />
