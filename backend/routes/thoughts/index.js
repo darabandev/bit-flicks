@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const asyncHandler = require("express-async-handler");
-const { Thought, Movie } = require("../../db/models");
+const { Thought, Movie, User } = require("../../db/models");
 
 //show all thoughts on a movie
 router.get(
@@ -12,7 +12,7 @@ router.get(
     if (movie !== null) {
       const movieId = movie.id;
 
-      const thoughts = await Thought.findAll({ where: { movieId } });
+      const thoughts = await Thought.findAll({ where: { movieId }, include: { model: User } });
       res.json(thoughts);
     } else {
       res.json([]);
@@ -31,8 +31,9 @@ router.post(
 
     await Thought.create({ userId, movieId, review });
 
-    const thoughts = await Thought.findAll({ where: { movieId } });
-    res.json(thoughts);
+    const thoughts = await Thought.findAll({ where: { movieId }, include: { model: User } });
+    console.log(thoughts);
+    res.json(thoughts.User);
   })
 );
 
