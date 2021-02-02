@@ -43,6 +43,10 @@
   border: 1px solid #2f3542;
 }
 
+.list-item h4 {
+  text-align: center;
+}
+
 .ellipsis {
   background-color: #e1e1e4;
   padding: 1px 4px;

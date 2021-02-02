@@ -32,8 +32,8 @@ router.post(
     await Thought.create({ userId, movieId, review });
 
     const thoughts = await Thought.findAll({ where: { movieId }, include: { model: User } });
-    console.log(thoughts);
-    res.json(thoughts.User);
+
+    res.json(thoughts);
   })
 );
 

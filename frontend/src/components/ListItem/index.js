@@ -80,6 +80,7 @@ const ListItem = ({ list }) => {
           <i class="far fa-trash-alt"></i>
         </div>
         <ul>
+          {movies.length === 0 && <h4>This list feels empty. Let's add some movies!</h4>}
           {movies &&
             croppedList.map(movie => (
               <Link to={`/movies/${movie.imdbId}`}>
