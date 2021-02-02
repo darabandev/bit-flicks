@@ -47,6 +47,11 @@
   text-align: center;
 }
 
+.edit-list-form {
+  display: flex;
+  justify-content: center;
+}
+
 .ellipsis {
   background-color: #e1e1e4;
   padding: 1px 4px;
@@ -68,17 +73,19 @@
 }
 
 .edit-list-submit {
-  background-color: #f1f2f6;
+  background-color: #af1baf;
+  color: white;
   border: 0;
   padding: 1px 5px;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .edit-list-input {
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  padding: 1px 2px;
+  border: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 1px 4px;
   border-right: 1px solid #af1baf;
 }
 

@@ -59,19 +59,21 @@ const ListItem = ({ list }) => {
             <button className="close-new-list" onClick={() => setShowModal(false)}>
               <i className="fas fa-times"></i>
             </button>
-            <form onSubmit={handleEditList}>
-              <input
-                className="edit-list-input"
-                type="text"
-                value={listName}
-                onChange={e => setListName(e.target.value)}
-                placeholder="List Name"
-                required
-              />
-              <button className="edit-list-submit" type="submit">
-                Rename
-              </button>
-            </form>
+            <div className="edit-list-form">
+              <form onSubmit={handleEditList}>
+                <input
+                  className="edit-list-input"
+                  type="text"
+                  value={listName}
+                  onChange={e => setListName(e.target.value)}
+                  placeholder="List Name"
+                  required
+                />
+                <button className="edit-list-submit" type="submit">
+                  Rename
+                </button>
+              </form>
+            </div>
             <MovieList list={list} />
           </div>
         </Modal>
