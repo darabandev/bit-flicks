@@ -1,9 +1,15 @@
 .add-to-list-submit {
-  background-color: #f1f2f6;
+  background-color: #af1baf;
+  color: white;
   border: 0;
   padding: 2px 5px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+}
+
+.add-to-list-submit:disabled {
+  background-color: #d64bd6d8;
+  color: lightgray;
 }
 
 .add-to-list-input {
