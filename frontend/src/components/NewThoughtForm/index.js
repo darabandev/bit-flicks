@@ -19,6 +19,7 @@ const NewThoughtForm = () => {
   return (
     <form onSubmit={handleNewThought}>
       <textarea value={review} onChange={e => setReview(e.target.value)}></textarea>
+      <p>Characters Remaining</p>
       <button type="submit">Post</button>
     </form>
   );

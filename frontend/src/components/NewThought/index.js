@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Modal from "react-modal";
 import { useParams } from "react-router-dom";
 import { createNewThought } from "../../store/thoughts";
@@ -11,6 +11,8 @@ const NewThought = () => {
   const { imdbId } = useParams();
   const [review, setReview] = useState("");
   const [showModal, setShowModal] = useState(false);
+  const [charRemaining, setCharRemaining] = useState(300);
+  const [thoughtDisabled, setThoughtDisabled] = useState(true);
 
   const customStyles = {
     content: {
@@ -37,6 +39,12 @@ const NewThought = () => {
     if (e.keyCode === 13) handleNewThought(e);
   };
 
+  useEffect(() => {
+    setCharRemaining(300 - review.length);
+
+    review.length >= 2 ? setThoughtDisabled(false) : setThoughtDisabled(true);
+  }, [review]);
+
   return (
     <>
       <button className="new-thought-btn" onClick={() => setShowModal(true)}>
@@ -49,8 +57,16 @@ const NewThought = () => {
             <i class="fas fa-times"></i>
           </button>
           <form className="new-thought-form" onSubmit={handleNewThought}>
-            <textarea onKeyDown={e => checkKey(e)} value={review} onChange={e => setReview(e.target.value)}></textarea>
-            <button className="new-thought-submit" type="submit">
+            <textarea
+              maxlength="300"
+              onKeyDown={e => checkKey(e)}
+              value={review}
+              onChange={e => setReview(e.target.value)}
+            ></textarea>
+            <p>
+              Characters Remaining: <span>{charRemaining}</span>
+            </p>
+            <button disabled={thoughtDisabled} className="new-thought-submit" type="submit">
               Post
             </button>
           </form>
