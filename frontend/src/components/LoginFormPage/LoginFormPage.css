@@ -13,6 +13,12 @@
   -o-border-radius: 10px;
 }
 
+.auth-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .auth-form input {
   border: none;
   background-color: transparent;

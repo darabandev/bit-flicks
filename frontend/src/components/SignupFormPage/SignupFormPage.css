@@ -1,3 +1,16 @@
-/* form {
-  background-color: yellow;
-} */
+.auth-errors {
+  border: 1px solid red;
+  background-color: rgb(255, 143, 143);
+  color: red;
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.auth-errors li {
+  list-style-type: none;
+}
