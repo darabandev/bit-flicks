@@ -14,3 +14,13 @@
 .auth-errors li {
   list-style-type: none;
 }
+
+.auth-header {
+  margin-bottom: 25px;
+  color: #af1baf;
+}
+
+.auth-bottom-text {
+  font-size: 12px;
+  margin-top: 20px;
+}

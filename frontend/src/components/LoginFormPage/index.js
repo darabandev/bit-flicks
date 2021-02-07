@@ -2,7 +2,7 @@ import "./LoginFormPage.css";
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import * as sessionActions from "../../store/session";
-import { Redirect } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 
 const LoginFormPage = () => {
   const dispatch = useDispatch();
@@ -37,6 +37,7 @@ const LoginFormPage = () => {
             <li key={i}>{err}</li>
           ))}
         </ul>
+        <h1 className="auth-header">Login</h1>
         <form onSubmit={onSubmit}>
           <input
             required
@@ -58,6 +59,9 @@ const LoginFormPage = () => {
             Submit
           </button>
         </form>
+        <p className="auth-bottom-text">
+          Don't have an account? <Link to="/signup">Sign Up</Link>
+        </p>
       </div>
     </>
   );

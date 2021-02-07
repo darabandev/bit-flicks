@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Redirect } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 import * as sessionActions from "../../store/session";
 import "./SignupFormPage.css";
 
@@ -42,6 +42,7 @@ function SignupFormPage() {
             <li key={idx}>{error}</li>
           ))}
         </ul>
+        <h1 className="auth-header">Sign Up</h1>
         <form onSubmit={handleSubmit}>
           <input type="text" value={email} onChange={e => setEmail(e.target.value)} placeholder="Email" required />
           <input
@@ -72,6 +73,9 @@ function SignupFormPage() {
             Sign Up
           </button>
         </form>
+        <p className="auth-bottom-text">
+          Already have an account? <Link to="/login">Log In</Link>
+        </p>
       </div>
     </>
   );
