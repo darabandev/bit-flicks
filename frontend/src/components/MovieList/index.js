@@ -17,7 +17,10 @@ const MovieList = ({ list }) => {
           <li className="movie-list-item" key={movie.id}>
             {movie.title} ({movie.year})
           </li>
-          <i class="far fa-trash-alt" onClick={() => handleDeleteMovieList(sessionUser.id, list.id, movie.imdbId)}></i>
+          <i
+            className="far fa-trash-alt"
+            onClick={() => handleDeleteMovieList(sessionUser.id, list.id, movie.imdbId)}
+          ></i>
         </div>
       ))}
     </div>

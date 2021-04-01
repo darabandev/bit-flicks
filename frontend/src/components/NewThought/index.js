@@ -54,7 +54,7 @@ const NewThought = () => {
         <div className="modal-container thought-modal">
           <h3>Create New Thought</h3>
           <button className="close-new-list" onClick={() => setShowModal(false)}>
-            <i class="fas fa-times"></i>
+            <i className="fas fa-times"></i>
           </button>
           <form className="new-thought-form" onSubmit={handleNewThought}>
             <textarea

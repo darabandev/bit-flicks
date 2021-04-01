@@ -23,7 +23,7 @@ const SearchBar = () => {
         onChange={e => setSearchTerm(e.target.value)}
       />
       <button className="search-submit" type="submit" onClick={search}>
-        <i class="fas fa-search"></i>
+        <i className="fas fa-search"></i>
       </button>
     </form>
   );

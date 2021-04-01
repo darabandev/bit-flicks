@@ -56,7 +56,7 @@ const MovieDisplay = ({ movie }) => {
         <div className="modal-container">
           <h3>Add to List</h3>
           <button className="close-new-list" onClick={() => setShowModal(false)}>
-            <i class="fas fa-times"></i>
+            <i className="fas fa-times"></i>
           </button>
           <AddToListForm setShowModal={setShowModal} />
         </div>

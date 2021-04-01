@@ -79,13 +79,13 @@ const ListItem = ({ list }) => {
         </Modal>
 
         <div onClick={handleDelete} className="list-delete-btn">
-          <i class="far fa-trash-alt"></i>
+          <i className="far fa-trash-alt"></i>
         </div>
         <ul>
           {movies.length === 0 && <h4>This list feels empty. Let's add some movies!</h4>}
           {movies &&
             croppedList.map(movie => (
-              <Link to={`/movies/${movie.imdbId}`}>
+              <Link key={movie.id} to={`/movies/${movie.imdbId}`}>
                 <img className="list-img" key={movie.id} src={movie.poster} alt="poster" />
               </Link>
             ))}
