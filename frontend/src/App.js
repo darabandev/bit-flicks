@@ -8,6 +8,7 @@ import MoviePageContainer from "./components/MoviePageContainer";
 import ListPageContainer from "./components/ListPageContainer";
 import Navigation from "./components/Navigation";
 import * as sessionActions from "./store/session";
+import ContactMe from "./components/ContactMe";
 
 function App() {
   const dispatch = useDispatch();
@@ -20,6 +21,7 @@ function App() {
     isLoaded && (
       <>
         <Navigation isLoaded={isLoaded} />
+        <ContactMe />
         {isLoaded && (
           <Switch>
             <Route exact path="/">
