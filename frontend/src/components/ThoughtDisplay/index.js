@@ -22,7 +22,7 @@ const ThoughtDisplay = () => {
       {thoughts.length === 0 && <h4>Be the first to give your thoughts on this movie!</h4>}
       <NewThought />
       {thoughts.map(thought => (
-        <ThoughtComment thought={thought} />
+        <ThoughtComment key={thought.id} thought={thought} />
       ))}
     </div>
   );
