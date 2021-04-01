@@ -5,7 +5,7 @@
   padding: 0.8em 2em;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
-  background-color: #24292e;
+  background-color: #ab1fab;
   color: white;
   display: flex;
   gap: 1em;
@@ -14,10 +14,10 @@
 }
 
 .contact-me a {
-  color: white;
+  color: #f1f2f6;
   font-size: 1.4em;
 }
 
 .contact-me a:hover {
-  color: #ffa500;
+  color: #2f3542;
 }
