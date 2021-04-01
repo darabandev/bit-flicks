@@ -14,7 +14,7 @@ const ListPageContainer = () => {
 
   useEffect(() => {
     if (sessionUser) dispatch(getOneListFromDb(listId));
-  }, [dispatch, sessionUser]);
+  }, [dispatch, sessionUser, listId]);
 
   if (!list) return null;
 
