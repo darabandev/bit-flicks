@@ -1,0 +1,23 @@
+.contact-me {
+  position: fixed;
+  bottom: 0;
+  right: 4em;
+  padding: 0.8em 2em;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background-color: #24292e;
+  color: white;
+  display: flex;
+  gap: 1em;
+  font-size: 1.2em;
+  align-items: center;
+}
+
+.contact-me a {
+  color: white;
+  font-size: 1.4em;
+}
+
+.contact-me a:hover {
+  color: #ffa500;
+}
