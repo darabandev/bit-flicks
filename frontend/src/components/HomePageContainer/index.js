@@ -18,9 +18,9 @@ const HomePageContainer = () => {
   if (!params[0] && !sessionUser) return <Redirect to="/login" />;
 
   return (
-    <>
+    <div className="main">
       <ListContainer lists={lists} />
-    </>
+    </div>
   );
 };
 

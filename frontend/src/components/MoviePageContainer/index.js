@@ -15,10 +15,10 @@ const MoviePageContainer = () => {
   }, [dispatch, imdbId]);
 
   return (
-    <>
+    <div className="main">
       <MovieDisplay movie={movie} />
       <ThoughtDisplay />
-    </>
+    </div>
   );
 };
 

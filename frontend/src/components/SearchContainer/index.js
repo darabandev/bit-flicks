@@ -19,14 +19,14 @@ const SearchContainer = () => {
     return <h2 className="nothing-found">Nothing Found! Please try a different search term.</h2>;
 
   return (
-    <>
+    <div className="main">
       <h1 className="search-header">Search Results</h1>
       <div className="results-container">
         {results.map((result, idx) => (
           <SearchResultItem key={`${result.Title}${idx}`} info={result} />
         ))}
       </div>
-    </>
+    </div>
   );
 };
 
