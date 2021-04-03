@@ -14,7 +14,9 @@ const LoginContainer = () => {
         <source src={video} type="video/mp4" />
       </video>
       <div className="login-container">
-        <h1 className="title">Bit Flicks</h1>
+        <h1 className="title">
+          <span>Bit Flicks</span>
+        </h1>
         {params[0] === "/login" ? <LoginFormPage /> : <SignupFormPage />}
         <div className="placeholder"></div>
       </div>

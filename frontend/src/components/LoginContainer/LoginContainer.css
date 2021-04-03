@@ -8,8 +8,13 @@
   letter-spacing: 0.2em;
   text-shadow: 2px 2px 2px #ab1fab;
   width: fit-content;
-  border-bottom: 0.1em solid white;
+  border-bottom: 0.06em solid white;
   box-shadow: 0 2px 0 #ab1fab;
+}
+
+.title span {
+  display: block;
+  margin-right: -0.1em;
 }
 
 #background-video {

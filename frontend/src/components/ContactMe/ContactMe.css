@@ -2,7 +2,7 @@
   position: fixed;
   bottom: 0;
   right: 4em;
-  padding: 0.8em 2em;
+  padding: 0.4em 2em;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   background-color: #ab1fab;
@@ -11,11 +11,19 @@
   gap: 1em;
   font-size: 1.2em;
   align-items: center;
+  box-shadow: 0 0 5px #000;
+}
+
+.contact-me span {
+  font-family: "Open Sans", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-weight: 200;
 }
 
 .contact-me a {
   color: #f1f2f6;
   font-size: 1.4em;
+  transition: 0.2s all;
+  font-weight: 100;
 }
 
 .contact-me a:hover {
