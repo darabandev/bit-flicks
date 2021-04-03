@@ -13,8 +13,11 @@ body {
 }
 
 #root {
-  width: 95%;
-  max-width: 1000px;
+  width: 100vw;
   min-height: 100vh;
   color: #2f3542;
+}
+
+.main {
+  max-width: 1000px;
 }

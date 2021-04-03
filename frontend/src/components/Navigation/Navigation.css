@@ -57,3 +57,7 @@
 .log-out-btn:hover {
   cursor: pointer;
 }
+
+.hidden {
+  display: none;
+}

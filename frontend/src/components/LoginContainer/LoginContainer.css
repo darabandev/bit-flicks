@@ -6,3 +6,14 @@
   font-weight: lighter;
   margin-bottom: 5%;
 }
+
+#background-video {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  float: left;
+  top: 0;
+  padding: none;
+  position: fixed; /*optional depending on what you want to do in your app*/
+  z-index: -1;
+}

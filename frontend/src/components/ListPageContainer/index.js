@@ -19,7 +19,7 @@ const ListPageContainer = () => {
   if (!list) return null;
 
   return (
-    <div className="list-page">
+    <div className="list-page main">
       <h1 className="list-page-header">{list.name}</h1>
       <div className="img-holder">
         {list.Movies.map(movie => (

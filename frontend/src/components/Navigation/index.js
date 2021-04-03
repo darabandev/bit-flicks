@@ -1,4 +1,5 @@
-import { NavLink, Link, useHistory } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { NavLink, Link, useHistory, withRouter } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { logout } from "../../store/session";
@@ -9,6 +10,12 @@ const Navigation = ({ isLoaded }) => {
   const dispatch = useDispatch();
   const history = useHistory();
   const sessionUser = useSelector(state => state.session.user);
+  const isAuthPage = window.location.pathname === "/login" || window.location.pathname === "/signup";
+  const [authPage, setAuthPage] = useState(isAuthPage);
+
+  useEffect(() => {
+    setAuthPage(isAuthPage);
+  }, [isAuthPage]);
 
   const handleLogout = () => {
     dispatch(logout());
@@ -16,7 +23,7 @@ const Navigation = ({ isLoaded }) => {
   };
 
   return (
-    <ul className="navbar">
+    <ul className={`navbar ${authPage ? "hidden" : ""}`}>
       {sessionUser ? (
         <>
           <Link className="nav-text" to="/">
@@ -40,4 +47,4 @@ const Navigation = ({ isLoaded }) => {
   );
 };
 
-export default Navigation;
+export default withRouter(Navigation);
