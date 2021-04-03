@@ -16,6 +16,7 @@ const LoginContainer = () => {
       <div className="login-container">
         <h1 className="title">Bit Flicks</h1>
         {params[0] === "/login" ? <LoginFormPage /> : <SignupFormPage />}
+        <div className="placeholder"></div>
       </div>
     </>
   );

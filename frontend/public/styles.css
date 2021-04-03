@@ -1,3 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("cool-background.png");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#root {
+  width: 100vw;
+  min-height: 100vh;
+  color: #2f3542;
+}
+
 .main {
   max-width: 1000px;
+  margin: 0 auto;
 }

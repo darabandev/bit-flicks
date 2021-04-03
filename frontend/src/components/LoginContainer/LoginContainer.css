@@ -1,10 +1,15 @@
 .title {
   color: white;
-  font-size: 500%;
+  font-size: 7em;
   text-align: center;
-  font-family: "Playball", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: lighter;
-  margin-bottom: 5%;
+  margin: 0.3em auto 0 auto;
+  letter-spacing: 0.2em;
+  text-shadow: 2px 2px 2px #ab1fab;
+  width: fit-content;
+  border-bottom: 0.1em solid white;
+  box-shadow: 0 2px 0 #ab1fab;
 }
 
 #background-video {
@@ -14,6 +19,17 @@
   float: left;
   top: 0;
   padding: none;
-  position: fixed; /*optional depending on what you want to do in your app*/
+  position: fixed;
   z-index: -1;
+}
+
+.login-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.placeholder {
+  height: 25%;
 }
