@@ -5,7 +5,6 @@
 }
 
 body {
-  background-image: url("cool-background.png");
   display: flex;
   justify-content: center;
   align-items: center;
