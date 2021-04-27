@@ -12,7 +12,6 @@ const setResults = results => {
 export const trySearch = term => async dispatch => {
   const response = await fetch(`/search/${term}`);
   const results = response.data.Search;
-  console.log(results);
 
   if (results === undefined) {
     dispatch(setResults([]));
